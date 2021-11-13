@@ -4,6 +4,38 @@
   
   
   <entry>
+    <title>JDK、JRE、JVM</title>
+    <link href="/2021/11/13/jjj/"/>
+    <url>/2021/11/13/jjj/</url>
+    
+    <content type="html"><![CDATA[<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><p>  即：Java Development Kit –Java的开发工具包 ，其中包含了JRE和java开发工具。JDK是java的最小开发环境，所以JDK是java语言的开发核心。</p><h2 id="JRE"><a href="#JRE" class="headerlink" title="JRE"></a>JRE</h2><p>  即：Java Runtime Environment–java运行时环境，其中包含了JVM和java程序运行时必需的环境，是java程序的最小运行环境。</p><h2 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h2><p>  即：Java Virtual Machine–java虚拟机，它负责加载并运行.class文件（字节码文件）。JVM把java文件转化为系统能够理解的指令，不同的操作系统有着与之对应的JVM，同一段java代码通过不同平台的JVM能实现相同的功能，所以JVM是java程序能够跨平台运行的核心。</p><p>ps：<em>程序员在ide上编写的代码称为源代码，源代码在经过编译后会生成相应的字节码（.class)文件，JVM处理的是字节码文件。</em></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>java基础</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>一些基础的DOS命令</title>
+    <link href="/2021/11/13/dos/"/>
+    <url>/2021/11/13/dos/</url>
+    
+    <content type="html"><![CDATA[<p>盘符切换：</p><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dos"># 盘符名:<br># 如：<br># C:<br></code></pre></td></tr></table></figure><p>查看当前目录下的所有文件：</p><p><code># dir</code></p><p>切换目录：</p><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta"># cd</span><br><span class="hljs-meta"># 即 change directory</span><br><span class="hljs-meta"># 通过 cd /d 盘符名:\目录名  可实现跨盘符切换目录</span><br><span class="hljs-meta"># cd..  返回上一级目录</span><br></code></pre></td></tr></table></figure><p>文件操作：</p><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta"># md 文件夹名  创建一个文件夹</span><br><span class="hljs-meta"># cd&gt;文件名.文件类型后缀  创建一个文件</span><br><span class="hljs-meta"># rd  删除目录（文件夹）  在删除文件夹时需要文件夹为空</span><br><span class="hljs-meta"># del 删除文件</span><br></code></pre></td></tr></table></figure><p>其他：</p><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta"># cls  清楚屏幕</span><br><span class="hljs-meta"># exit  退出</span><br><span class="hljs-meta"># ipconfig  查看当前电脑ip</span><br><span class="hljs-meta"># notepad 打开一个记事本</span><br></code></pre></td></tr></table></figure><p>JAVA相关操作：</p><figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs vala"><span class="hljs-meta"># java -version 查看java版本</span><br><span class="hljs-meta"># javac 文件名.java  编译java文件</span><br><span class="hljs-meta"># java 文件名  运行.class文件</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Markdown的一些基础语法</title>
     <link href="/2021/11/12/blog-test/"/>
     <url>/2021/11/12/blog-test/</url>
