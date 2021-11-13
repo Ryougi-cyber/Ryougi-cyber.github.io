@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>Markdown的一些基础语法</title>
+    <link href="/2021/11/12/blog-test/"/>
+    <url>/2021/11/12/blog-test/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><p>一级标题写法是#+空格+标题名</p><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><p>二级标题写法是##+空格+标题名</p><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p>三级标题写法是###+空格+标题名</p><p><strong>加粗</strong></p><p>加粗字体在内容前后加上”**“</p><p><em>斜体</em></p><p>斜体字体在内容前后加上”*“</p><p><del>横线</del></p><p>删除线在内容前后加上”~~“</p><p>*无序列表</p><p>*无序列表</p><p>无序列表在内容前加”*“或”-“</p><p>1.有序列表</p><p>2.有序列表</p><p>有序列表在内容前加数字和 ”. “</p><p><code>内嵌代码</code><br>内嵌代码被包裹在一对”`”中</p><h1 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h1><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs md">public static void main(String[]args)&#123;<br><span class="hljs-code">        system out println(&quot;hello,world!&quot;)</span><br><span class="hljs-code">        &#125;</span><br></code></pre></td></tr></table></figure><p>代码块被包裹在三对”`”中</p><p><a href="https://www.baidu.com/">链接：此处为百度</a><br>链接写法为[]+(),其中[]中写链接描述，()中写链接内容</p><p><a href="https://www.baidu.com/" title="百度">带title的链接</a><br>在()中的链接后跟空格+”title”，可使链接带title</p><h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p><img src="/2021/11/12/blog-test/20211004_233643.jpg"></p><p>图片写法与链接相似为，!+[]+()，[]中写图片描述，()中写图片位置</p><h1 id="带title图片"><a href="#带title图片" class="headerlink" title="带title图片"></a>带title图片</h1><p><img src="/2021/11/12/blog-test/20211004_233643.jpg" title="卤豆腐"></p><p>带title的图片写法与链接带title的方法一致</p><p>关于hexo中图片无法正常显示的问题<br>需要把根目录下 _config.yml 中的 post_asset_folder 改为 true<br>需要一个与文章同名的同级文件夹，把所需的图片放到该文件夹当中<br>可能需要用到插件”<a href="https://github.com/CodeFalling/hexo-asset-image&quot;">https://github.com/CodeFalling/hexo-asset-image&quot;</a><br>文件路径最好是相对路径</p><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><blockquote><p>引用<br>阿萨大大<br>啊大大</p></blockquote><p>在内容前加&gt;可使内容变为引用内容</p><h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><table><thead><tr><th>姓名</th><th align="left">年龄</th><th align="right">爱好</th></tr></thead><tbody><tr><td>aaa</td><td align="left">bbb</td><td align="right">ccc</td></tr><tr><td>aab</td><td align="left">aac</td><td align="right">aad</td></tr></tbody></table><p>分割线</p><hr><p>分割线写法为三个*</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
