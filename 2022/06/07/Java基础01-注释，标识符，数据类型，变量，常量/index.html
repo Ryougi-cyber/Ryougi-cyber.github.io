@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/Untitled.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <meta name="description" content="注释：注释就是对代码的解释和说明。目的是为了让别人和自己很容易看懂，一看就知道这段代码是做什么用的。正确的程序注释一般包括序言性注释和功能性注释。序言性注释的主要内容包括模块的接口、数据的描述和模块的功能。模块的功能性注释的主要内容包括程序段的功能、语句的功能和数据的状态，注释不会被计算机编译。 注释 12345678public static void main(String[] args)&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础01:注释，标识符，数据类型，变量，常量">
+<meta property="og:url" content="http://example.com/2022/06/07/Java%E5%9F%BA%E7%A1%8001-%E6%B3%A8%E9%87%8A%EF%BC%8C%E6%A0%87%E8%AF%86%E7%AC%A6%EF%BC%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%8C%E5%8F%98%E9%87%8F%EF%BC%8C%E5%B8%B8%E9%87%8F/index.html">
+<meta property="og:site_name" content="伽蓝之堂">
+<meta property="og:description" content="注释：注释就是对代码的解释和说明。目的是为了让别人和自己很容易看懂，一看就知道这段代码是做什么用的。正确的程序注释一般包括序言性注释和功能性注释。序言性注释的主要内容包括模块的接口、数据的描述和模块的功能。模块的功能性注释的主要内容包括程序段的功能、语句的功能和数据的状态，注释不会被计算机编译。 注释 12345678public static void main(String[] args)&amp;#">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-06-07T00:15:02.000Z">
+<meta property="article:modified_time" content="2022-06-07T01:58:43.970Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="java基础">
+<meta name="twitter:card" content="summary_large_image">
+  
+  <title>Java基础01:注释，标识符，数据类型，变量，常量 - 伽蓝之堂</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css" />
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.8.12","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname"}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>両儀</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/j.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Java基础01:注释，标识符，数据类型，变量，常量">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2022-06-07 08:15" pubdate>
+        2022年6月7日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.5k 字
+    </span>
+  
+
+  
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8 分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Java基础01:注释，标识符，数据类型，变量，常量</h1>
+            
+            <div class="markdown-body">
+              <h2 id="注释："><a href="#注释：" class="headerlink" title="注释："></a>注释：</h2><p>注释就是对代码的解释和说明。目的是为了让别人和自己很容易看懂，一看就知道这段代码是做什么用的。正确的程序注释一般包括序言性注释和功能性注释。序言性注释的主要内容包括模块的接口、数据的描述和模块的功能。模块的功能性注释的主要内容包括程序段的功能、语句的功能和数据的状态，注释不会被计算机编译。</p>
+<p><code>注释</code></p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-built_in">public</span> static <span class="hljs-type">void</span> main(String[] args)&#123;<br>   rl01 rl01 = <span class="hljs-built_in">new</span> rl01();<br>   <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println(rl01.name);<br>   <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println(name2);<br>   //pulic static <span class="hljs-type">void</span> main 快捷操作：psvm<br>   <span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println(&quot;hello world&quot;);<br>   //<span class="hljs-keyword">System</span>.<span class="hljs-keyword">out</span>.println 快捷操作：sout<br>   &#125;<br></code></pre></td></tr></table></figure>
+<p>单行注释方法：<code>//注释内容</code><br>多行注释方法：<code>/*注释内容*/</code><br>文档注释方法：<code>/**注释内容*/</code></p>
+<h2 id="标识符："><a href="#标识符：" class="headerlink" title="标识符："></a>标识符：</h2><p>Java的所有组成部分都需要名字。类名、变量名、方法名都被称为标识符。<br>关键字是被JAVA编译器占用的拥有特殊含义的字符串。<br>所有的标识符都应以字母（A-Z和a-z）、美元符号（$）、下划线（_）开头。<br>首字符之后可以是字母、数字、美元符号和下划线的任何字符组合。<br>不能使用关键字作为变量名或者方法名。<br>标识符是大小写敏感的（严格区分大小写）。</p>
+<h2 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h2><p>强类型语言：要求变量的使用要严格符合规定，所有变量都必须先定义后才能使用。<br>弱类型语言：变量的使用不用严格符合规定，变量不必先定义才能使用。<br>Java是强类型语言。<br>Java的数据类型分为两大类：基本类型（primitive type），引用类型（reference type）。<br>基本数据类型有：数值类型和Boolean类型（布尔值）。<br>8大基本数据类型：byte（字节型）、char（字符型）、short（短整数型）、int（整数型）、long（长整数型）、float（单精度浮点型）、double（双精度浮点型）、Boolean类型（false、true）。  </p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-comment">//8大基本数据类型</span><br><span class="hljs-comment">//整数型</span><br><span class="hljs-keyword">int</span> num1 = <span class="hljs-number">15</span>;<br><span class="hljs-keyword">byte</span> num2 = <span class="hljs-number">5</span>;<br><span class="hljs-keyword">short</span> num3 = <span class="hljs-number">8</span>;<br><span class="hljs-keyword">long</span> num4 = <span class="hljs-number">114514L</span>;<br><span class="hljs-comment">//浮点数型</span><br><span class="hljs-keyword">float</span> num5 = <span class="hljs-number">3.14f</span>;<br><span class="hljs-keyword">double</span> num6 = <span class="hljs-number">3.1415926</span>;<br><span class="hljs-comment">//字符型</span><br><span class="hljs-keyword">char</span> <span class="hljs-keyword">word</span> = <span class="hljs-string">&#x27;啊&#x27;</span>;<br><span class="hljs-comment">//字符串不属于基本类型属于引用类型</span><br><span class="hljs-comment">//布尔值Boolean</span><br><span class="hljs-keyword">boolean</span> bl1 = <span class="hljs-literal">true</span>;<br><span class="hljs-keyword">boolean</span> bl2 = <span class="hljs-literal">false</span>;<br></code></pre></td></tr></table></figure>
+<p>引用数据类型有：类、接口、数组。<br>数据类型长度：<br>byte占用1字节，char占用2字节，short占用2字节，int占用4字节，long占用8字节，float占用4字节，double占用8字节，Boolean值占用1字节。<br>什么是字节：<br>位（bit）：是计算机内部 数据储存 的最小单位，通常把一位二进制数字称为1bit，如11001100就是一个8位二进制数。<br>字节（byte）：是计算机中 数据处理 的基本单位，一般用 B 来表示。<br>1B（byte，字节） = 8bit（位）<br>字符：是指计算机中使用的字母、数字、字、符号。  </p>
+<h3 id="类型转换："><a href="#类型转换：" class="headerlink" title="类型转换："></a>类型转换：</h3><p>由于Java是强类型语言，所以要进行有些运算时需要强制转换，运算时需要把不同类型的数据转换为相同类型数据后再进行运算。<br>强制转换：类型 变量名 =（类型）变量（或者变量名）；<br>当需要把范围大的类型转换为范围小的类型时需要进行强制类型转换，范围小的类型转换为范围大的类型时会进行自动转换。</p>
+<p>注意事项：<br>不能对布尔值进行数据转换.<br>不能把对象类型转换为不相干的类型.<br>转换的时候可能会出现内存溢出或者精度问题.<br>在进行很大的数据运算时注意可能会出现内存溢出的问题.</p>
+<h2 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h2><p>变量的定义：<br>在程序运行期间，随时可能产生一些临时数据，应用程序会将这些数据保存在一些内存单元中，每个内存单元都用一个标识符来标识。这些内存单元被称为变量，定义的标识符就是变量名，内存单元中存储的数据就是变量的值。  </p>
+<p>Java变量是程序中最基本的存储单元，其要素包含变量名、变量类型和作用域。<br>Java支持3种不同的变量类型：类变量、实例变量、局部变量<br>不同的变量类型其作用域也各不相同。<br>局部变量存在于方法内，使用前必须声明和初始化值。<br>实例变量存在于类里方法外，从属于对象，如果不自行初始化值，该变量值为默认值，使用前必须先new一个当前类的实例对象。<br>类变量存在于类里方法外，变量类型前用static修饰，可以直接在该类的方法中调用。  </p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-built_in">int</span> nmm = <span class="hljs-number">10</span>;<br><span class="hljs-comment">//变量的声明方法为 变量类型 变量名 = 变量值；</span><br><span class="hljs-built_in">int</span> nn1 = <span class="hljs-number">22</span>,nn2 = <span class="hljs-number">1112</span>;<br><span class="hljs-comment">//可以同时声明多个同类型变量，但会降低代码可读性，尽量不要如此声明</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-keyword">int</span> t1 = <span class="hljs-number">10</span>;<br>    System.out.<span class="hljs-built_in">println</span>(t1);<br>    <span class="hljs-comment">//局部变量存在于方法内，使用前必须声明和初始化值</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="常量："><a href="#常量：" class="headerlink" title="常量："></a>常量：</h2><p>常量是初始化之后无法改变的值，可以理解为特殊的变量，它的值在设定后，在程序的运行中不允许被改变。<br>常量名一般使用大写字符。</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs angelscript"><span class="hljs-keyword">final</span> <span class="hljs-built_in">int</span> CI1 = <span class="hljs-number">11</span>;<br><span class="hljs-comment">//常量的定义方法为在常量类型前用final修饰</span><br></code></pre></td></tr></table></figure>
+
+<p>变量的命名规范：<br>所有的变量、方法、类名应尽量做到见名知意。<br>类成员变量应遵循首字母小写和驼峰原则，如：monthSalary<br>局部变量应遵循首字母小写和驼峰原则。<br>常量使用大写字符，分隔时用下划线，如：MAX_VALUE<br>类名：首字母大写和驼峰原则，如：Man，GoodMan<br>方法名：首字母小写和驼峰原则，如：run（），runRun（）  </p>
+<p>注意事项：<br>每个变量都有类型，类型可以是基本类型也可以是引用类型.<br>变量名必须是合法的标识符.<br>变量声明是一条完整的语句，因此每一个声明都必须以分号结束.  </p>
+<hr>
+<p>ps:<br><em>1bit表示1位。</em><br><em>1Byte表示一字节 1B = 8b</em><br><em>1024B = 1KB</em><br><em>1024KB = 1M</em><br><em>1024M = 1G</em><br><em>布尔值的默认值是false，数值的默认值是0，字符型的默认值是null，8大基本类型以外的类型默认值都为null。</em></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/java%E5%9F%BA%E7%A1%80/">java基础</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/11/13/jjj/">
+                        <span class="hidden-mobile">JDK、JRE、JVM</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  
+    <script  src="https://cdn.jsdelivr.net/npm/tocbot@4/dist/tocbot.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js" ></script>
+  
+  
+    <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4/anchor.min.js" ></script>
+  
+  
+    <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" ></script>
+  
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
